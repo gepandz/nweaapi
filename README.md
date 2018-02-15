@@ -33,3 +33,9 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/gepand
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+## Credits and sources
+Resources I reference while writing this, as I haven't written a Sinatra API from scratch in quite a while...:
+
+* https://x-team.com/blog/how-to-create-a-ruby-api-with-sinatra/
+* https://github.com/sinatra/sinatra/blob/master/README.md
