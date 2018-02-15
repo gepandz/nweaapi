@@ -6,12 +6,12 @@ require "nweaapi/version"
 Gem::Specification.new do |spec|
   spec.name          = "nweaapi"
   spec.version       = Nweaapi::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["George Pandzik"]
+  spec.email         = ["gepandz@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Ruby program to answer NWEA's requirements}
+  spec.description   = %q{This should implement the requested API}
+  spec.homepage      = "https://github.com/gepandz/nweaapi"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "sinatra", "~> 2.0"
 end
