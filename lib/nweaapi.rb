@@ -29,8 +29,9 @@ end
 
 post '/post' do
   request.body.rewind # In case someone already read it
-  data = JSON.parse request.body.read
+  data = JSON.parse(request.body.read)[0]
   p = Post.new
   p.title = data[:title]
   p.body = data[:body]
+  p.save
 end
