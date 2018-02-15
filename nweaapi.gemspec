@@ -36,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "sinatra", "~> 2.0"
   spec.add_development_dependency "gem-release"
   spec.add_development_dependency "datamapper"
+  spec.add_development_dependency "dm-sqlite-adapter"
 end

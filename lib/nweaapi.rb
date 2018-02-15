@@ -1,6 +1,6 @@
 require "nweaapi/version"
 require 'sinatra'
-require 'datamapper'
+require 'data_mapper'
 
 # Connect to our local DB, which is kept at lib/resources/blog.db
 # Note: This requires setting up a :default DB at this point
