@@ -2,5 +2,7 @@ require "nweaapi/version"
 require 'sinatra'
 
 get '/' do
-  'Hello, World!'
+  'This is not a valid endpoint. Please use /post or /posts'
 end
+
+
