@@ -20,6 +20,19 @@ Or install it yourself as:
 
 
 
+## Simplifying Assumptions and Known Facts
+I make certain simplifying assumptions to keep things implementable in a short period of time:
+* No user auth -- if you can access this, then you have the permissions to do so
+* I should use the provided blog.db file's main DB and its posts table, which is defined thusly:
+```sql
+CREATE TABLE posts(
+  post_id integer primary key asc autoincrement,
+    title string,
+      body string
+
+);
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
