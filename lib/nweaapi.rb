@@ -29,9 +29,13 @@ end
 
 post '/post' do
   request.body.rewind # In case someone already read it
-  data = JSON.parse(request.body.read)[0]
-  p = Post.new
-  p.title = data[:title]
-  p.body = data[:body]
-  p.save
+  ary = JSON.parse(request.body.read)
+  ary.each do |data|
+    puts data
+    p = Post.new
+    p.title = data["title"]
+    p.body = data["body"]
+    p.save
+  end
+  return
 end
