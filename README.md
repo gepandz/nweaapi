@@ -1,26 +1,33 @@
-# Nweaapi
+# Nweaapi - The API-based blog
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'nweaapi'
-```
+Clone the repository to your local system (I'm assuming a *nix-like environment for the examples)
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
-Or install it yourself as:
-
-    $ gem install nweaapi
+If you do not have Ruby and Bundler, please install them via your OS's standard installation system
 
 ## Usage
 
+To run the server, execute the following from the root of this repository:
 
+    $ bundle exec ruby lib/nweaapi.rb
+
+To test, open a browser, such as Chrome or Firefox, and access http://localhost:4567/posts via a GET call to see the contents of the database
+
+To insert new posts, send a JSON payload via a POST call to http://localhost:4567/post (I use Postman, but any HTTP driver should work)
+
+To see the new posts, refresh the /posts endpoint noted above.
+
+To reset the database to a clean state, execute:
+
+    $ git checkout resources/blog.db
 
 ## Simplifying Assumptions and Known Facts
+
 I make certain simplifying assumptions to keep things implementable in a short period of time:
 * No user auth -- if you can access this, then you have the permissions to do so
 * I should use the provided blog.db file's main DB and its posts table, which is defined thusly:
@@ -33,15 +40,9 @@ CREATE TABLE posts(
 );
 ```
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/gepandz/nweaapi.
+Bug reports and pull requests are welcome on GitHub at https://github.com/gepandz/nweaapi
 
 ## License
 
@@ -52,3 +53,5 @@ Resources I reference while writing this, as I haven't written a Sinatra API fro
 
 * https://x-team.com/blog/how-to-create-a-ruby-api-with-sinatra/
 * https://github.com/sinatra/sinatra/blob/master/README.md
+* https://code.tutsplus.com/tutorials/singing-with-sinatra-the-recall-app--net-19128
+* Miscellaneous error reports on StackOverflow
