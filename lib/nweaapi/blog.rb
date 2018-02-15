@@ -6,7 +6,7 @@ class Nweaapi
     attr_accessor :db
 
     def initialize
-      @db = SQLite3::Database.open 'blog.db'
+      @db = SQLite3::Database.open Pathname.new(__dir__) + '..' + 'resources' + 'blog.db'
     end
   end
 end
