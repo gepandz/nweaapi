@@ -1,5 +1,8 @@
 require "nweaapi/version"
+require 'sinatra'
 
 module Nweaapi
-  # Your code goes here...
+  get '/' do
+    'Hello, World!'
+  end
 end
