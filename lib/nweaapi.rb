@@ -22,3 +22,15 @@ get '/' do
   'This is not a valid endpoint. Please use /post or /posts'
 end
 
+get '/posts' do
+  @posts = Post.all :order => :post_id.desc
+  @posts.to_json
+end
+
+post '/post' do
+  request.body.rewind # In case someone already read it
+  data = JSON.parse request.body.read
+  p = Post.new
+  p.title = data[:title]
+  p.body = data[:body]
+end
