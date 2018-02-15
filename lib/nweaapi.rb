@@ -1,5 +1,4 @@
 require "nweaapi/version"
-require "nweaapi/blog"
 require 'sinatra'
 require 'datamapper'
 
